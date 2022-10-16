@@ -1,5 +1,7 @@
 package hellojpa.jpql;
 
+import org.hibernate.annotations.BatchSize;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,7 +16,7 @@ public class Team {
     @GeneratedValue
     private Long id;
     private String name;
-
+//    @BatchSize(size = 100) // 요소로 배치사이즈를 설정할 수 있다. 그러나 글로벌 셋팅하는 것이 편하다.
     @OneToMany(mappedBy = "team")
     private List<Member> members = new ArrayList<>();
 
