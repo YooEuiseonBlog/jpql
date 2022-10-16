@@ -185,7 +185,7 @@ public class Main4 {
 //                    .executeUpdate();
 //
 //            System.out.println("EditCount = " + resultCount);
-//            em.clear();
+            em.clear();
 
             // 멤버 리스트 조회
             List<Member> members = em.createQuery("select m from Member m", Member.class)
